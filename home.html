@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almusa Cabs</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #ff5c00;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        header .logo h1 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd1a6;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-info span {
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero .cta {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero .cta a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid white;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .hero .cta a:hover {
+            background: white;
+            color: #ff5c00;
+        }
+
+        /* Select Your Car Section */
+        .car-selection {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .car-selection h2 {
+            font-size: 2.5rem;
+            color: #ff5c00;
+            margin-bottom: 20px;
+        }
+
+        .car-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .car {
+            text-align: center;
+            width: 200px;
+        }
+
+        .car img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .car h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        /* Amazing Services Section */
+        .services {
+            padding: 50px 20px;
+            background: #f9f9f9;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service {
+            text-align: center;
+            width: 200px;
+        }
+
+        .service img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .service h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .service .view-more {
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: #ff5c00;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .service .view-more:hover {
+            background: #e65100;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .car-list, .service-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://i.ibb.co/gMfScxd/Screenshot-from-2025-01-12-18-30-56.png" alt="Almusa Cabs Logo">
+            <h1>Almusa Cabs</h1>
+        </div>
+        <nav>
+            <ul>
+            	<li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="contact-info">
+            <span>+91 7356 542 721</span>
+            <span>almusacabs@almusa.in</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hire a Car for your trips</h1>
+            <p>Our professional drivers will drop you safely</p>
+            <div class="cta">
+                <a href="tel:+917356542721">Call Now</a>
+                <a href="https://wa.me/917356542721">WhatsApp Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="car-selection">
+        <h2>Select Your Car</h2>
+        <div class="car-list">
+            <div class="car">
+                <img src="https://via.placeholder.com/200x150" alt="Tempo Traveller">
+                <h3>Tempo Traveller</h3>
+            </div>
+            <div class="car">
+                <img src="https://via.placeholder.com/200x150" alt="42 Seater Bus">
+                <h3>42 Seater Bus</h3>
+            </div>
+            <div class="car">
+                <img src="https://via.placeholder.com/200x150" alt="Toyota Etios">
+                <h3>Toyota Etios</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Providing Amazing Services to Our Clients</h2>
+        <div class="service-list">
+            <div class="service">
+                <img src="https://via.placeholder.com/150" alt="Alappuzha">
+                <h3>Alappuzha</h3>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/150" alt="Athirappilly">
+                <h3>Athirappilly</h3>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/150" alt="Thiruvananthapuram">
+                <h3>Thiruvananthapuram</h3>
+                <a href="#" class="view-more">View More</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
